@@ -12,9 +12,9 @@
     --background: #091413;
     --foreground: #ededed;
     --footer: #012413;
-    --accent-color-1: #285a48;
-    --accent-color-2: #408a71;
-    --accent-color-3: #b0e4cc;
+    --accent-color-1: rgba(40, 90, 72, 0.2);
+    --accent-color-2: rgba(64, 138, 113, 0.4);
+    --accent-color-3: rgba(176, 228, 204, 0.5);
   }
   
   .logo {
@@ -69,4 +69,46 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+h1 {
+  max-width: 600px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -2.4px;
+  text-wrap: balance;
+  color: var(--text-primary);
+}
+
+h2 {
+  max-width: 420px;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -1px;
+  text-wrap: balance;
+  color: var(--text-primary);
+}
+
+h3 {
+  max-width: 320px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-wrap: balance;
+  color: var(--text-primary);
+}
+
+p {
+  max-width: 440px;
+  font-size: 18px;
+  line-height: 32px;
+  text-wrap: balance;
+  color: var(--text-secondary);
+}
+
+a {
+  font-weight: 500;
+  color: var(--text-primary);
 }
