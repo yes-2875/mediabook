@@ -1,4 +1,4 @@
-import styles from '@/styles/SmallMovieCard.module.css';
+import styles from '@/styles/LargeMovieCard.module.css';
 
 export default function LargeMovieCard({ movie, isFavourite, setFavourite}) {
     return (
