@@ -1,6 +1,6 @@
 .page {
-  --background: #fafafa;
-  --foreground: #fff;
+  --background: #ebfffa;
+  --foreground: #091413;
 
   --text-primary: #000;
   --text-secondary: #666;
@@ -23,11 +23,11 @@
   }
 
   .page {
-    --background: #090909;
-    --foreground: #000;
+    --background: #091413;
+    --foreground: #ededed;
 
     --text-primary: #ededed;
-    --text-secondary: #999;
+    --text-secondary: #ccc;
 
     --button-primary-hover: #ccc;
     --button-secondary-hover: #1a1a1a;
@@ -43,7 +43,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: var(--foreground);
+  background-color: var(--background);
   padding: 120px 60px;
 }
 

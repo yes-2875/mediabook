@@ -1,12 +1,18 @@
 :root, body {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ebfffa;
+  --foreground: #091413;
+  --accent-color-1: #c6fce5;
+  --accent-color-2: #90edd9;
+  --accent-color-3: #6bc4ca;
 }
 
 @media (prefers-color-scheme: dark) {
   :root, body {
-    --background: #0a0a0a;
+    --background: #091413;
     --foreground: #ededed;
+    --accent-color-1: #285a48;
+    --accent-color-2: #408a71;
+    --accent-color-3: #b0e4cc;
   }
 }
 

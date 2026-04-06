@@ -1,0 +1,19 @@
+.Navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    padding: 1em;
+    align-items: center;
+    font-family: var(--font-geist-sans);
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+.Link {
+    text-decoration: underline;
+}
+
+.Link:hover {
+    color: var(--accent-color-3);
+}
