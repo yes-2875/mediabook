@@ -11,7 +11,7 @@ export default function SmallMovieCard({ movie, isFavourite, setFavourite}) {
             <button onClick={setFavourite}>
                 {isFavourite ? "Remove from Favourites" : "Add to Favourites"}
             </button>
-            <Link src={`/movie/${movie.imdbID}`}>View Details</Link>
+            <Link href={`/movie/${movie["imdbID"]}`}>View Details</Link>
         </div>
     );
 }

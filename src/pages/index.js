@@ -1,5 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+import { sampleData } from "@/sampleData";
+import MovieList from "@/components/MovieList";
 
 export default function Home() {
   return (
@@ -11,10 +13,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1>To get started, edit the index.js file.</h1>
-        <p>
-          Text
-        </p>
+        <h1>Sample Movie Data</h1>
+        <MovieList movies={sampleData}/>
       </main>
     </>
   );
