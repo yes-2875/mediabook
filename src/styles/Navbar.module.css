@@ -14,6 +14,14 @@
     text-decoration: underline;
 }
 
+.Link.current {
+    font-weight: bold;
+}
+
 .Link:hover {
     color: var(--accent-color-3);
+}
+
+.Link:active {
+    color: var(--accent-color-2);
 }
