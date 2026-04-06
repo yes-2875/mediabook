@@ -14,7 +14,7 @@
     text-decoration: underline;
 }
 
-.Link.current {
+.current {
     font-weight: bold;
 }
 

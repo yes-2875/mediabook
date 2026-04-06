@@ -14,6 +14,10 @@
     --accent-color-2: #408a71;
     --accent-color-3: #b0e4cc;
   }
+  
+  .logo {
+    filter:invert(1);
+  }
 }
 
 html,

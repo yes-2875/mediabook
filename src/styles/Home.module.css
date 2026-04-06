@@ -10,7 +10,7 @@
   --button-secondary-border: #ebebeb;
 
   display: flex;
-  min-height: 100vh;
+  height:100%;
   align-items: center;
   justify-content: center;
   font-family: var(--font-geist-sans);
@@ -38,7 +38,7 @@
 
 .main {
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
