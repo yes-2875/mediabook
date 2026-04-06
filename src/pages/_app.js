@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
     <Navbar font1={geistSans} font2={geistMono}/>
-    <div className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
+    <div className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`} style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <Component {...pageProps} />
     </div>
     <Footer font1={geistSans} font2={geistMono}/>
