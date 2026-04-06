@@ -1,6 +1,7 @@
 :root, body {
   --background: #ebfffa;
   --foreground: #091413;
+  --footer: #c3ddd8;
   --accent-color-1: #c6fce5;
   --accent-color-2: #90edd9;
   --accent-color-3: #6bc4ca;
@@ -10,6 +11,7 @@
   :root, body {
     --background: #091413;
     --foreground: #ededed;
+    --footer: #012413;
     --accent-color-1: #285a48;
     --accent-color-2: #408a71;
     --accent-color-3: #b0e4cc;
@@ -17,6 +19,15 @@
   
   .logo {
     filter:invert(1);
+  }
+  
+  .page {
+    --text-primary: #ededed;
+    --text-secondary: #ccc;
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+    --button-secondary-border: #1a1a1a;
   }
 }
 

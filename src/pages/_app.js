@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import styles from "@/styles/Home.module.css";
 import "@/styles/globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -20,6 +21,7 @@ export default function App({ Component, pageProps }) {
     <div className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
       <Component {...pageProps} />
     </div>
+    <Footer font1={geistSans} font2={geistMono}/>
     </>
   );
 }
