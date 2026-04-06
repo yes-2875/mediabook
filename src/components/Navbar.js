@@ -6,7 +6,7 @@ import clsx from 'clsx';
 
 const links = [
     {key: 1, href: "/", name: "Home"},
-    {key: 2, href: "/about", name: "About"},
+    {key: 2, href: "/favorite", name: "Favorite"},
 ];
 
 export default function Navbar({ font1, font2 }) {
