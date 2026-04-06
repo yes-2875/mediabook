@@ -1,0 +1,16 @@
+.SmallMovieCard {
+    padding: 0.5em;
+    border: 1px solid var(--foreground);
+    border-radius: 0.5em;
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    
+    max-width: 500px;
+}
+
+.SmallMoviePoster {
+    width: 100%;
+    object-fit:contain;
+}

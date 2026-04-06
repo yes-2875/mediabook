@@ -1,17 +1,17 @@
 import styles from '@/styles/SmallMovieCard.module.css';
 import Link from 'next/link';
 
-export default function SmallMovieCard({ movie, isFavourite, setFavourite}) {
+export default function LargeMovieCard({ movie, isFavourite, setFavourite}) {
     return (
-        <div className={styles.SmallMovieCard}>
-            <img className={styles.SmallMoviePoster} src={movie.poster}></img>
+        <div className={styles.LargeMovieCard}>
+            <img className={styles.LargeMoviePoster} src={movie.poster}></img>
             <h3>{movie.title}</h3>
-            <p>{movie.year}</p>
+            <h2>{movie.year}</h2>
+            <p>{movie.description}</p>
             
             <button onClick={setFavourite}>
                 {isFavourite ? "Remove from Favourites" : "Add to Favourites"}
             </button>
-            <Link src={`/movie/${movie.id}`}>View Details</Link>
         </div>
     );
 }

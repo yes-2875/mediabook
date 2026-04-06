@@ -1,0 +1,16 @@
+.LargeMovieCard {
+    padding: 2em;
+    border: 1px solid var(--foreground);
+    border-radius: 2em;
+    display:flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 16px;
+    
+    max-height: 700px;
+}
+
+.LargeMoviePoster {
+    height: 100%;
+    object-fit:contain;
+}
