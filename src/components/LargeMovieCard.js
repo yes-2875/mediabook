@@ -1,5 +1,4 @@
 import styles from '@/styles/SmallMovieCard.module.css';
-import Link from 'next/link';
 
 export default function LargeMovieCard({ movie, isFavourite, setFavourite}) {
     return (

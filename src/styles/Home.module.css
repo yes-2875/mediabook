@@ -46,11 +46,11 @@
   gap: 24px;
   justify-content: space-evenly;
   background-color: var(--background);
-  padding: 120px 60px;
+  padding: 60px;
 }
 
 .main h1 {
-  max-width: 320px;
+  max-width: 600px;
   font-size: 40px;
   font-weight: 600;
   line-height: 48px;
