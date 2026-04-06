@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { useParams } from "next/navigation";
 import { sampleData } from "@/sampleData";
 import { useEffect, useState } from 'react';
 
@@ -10,8 +9,8 @@ import styles from "@/styles/Home.module.css";
 
 export default function MovieDetails() {
     
-    const {id} = useParams();
-    console.log(id);
+    const router = useRouter();
+    console.log(router.query.id);
     
     const setFavourite = function() {
       
@@ -26,7 +25,7 @@ export default function MovieDetails() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className={styles.main}>
-          <LargeMovieCard movie={sampleData.filter(item => item.imdbID === id)} isFavourite={false} setFavourite={setFavourite}/>
+          <LargeMovieCard movie={sampleData.filter(item => item.imdbID === router.query.id)} isFavourite={false} setFavourite={setFavourite}/>
         </main>
         </>
     );
