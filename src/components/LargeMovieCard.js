@@ -4,10 +4,10 @@ import Link from 'next/link';
 export default function LargeMovieCard({ movie, isFavourite, setFavourite}) {
     return (
         <div className={styles.LargeMovieCard}>
-            <img className={styles.LargeMoviePoster} src={movie.poster}></img>
-            <h3>{movie.title}</h3>
-            <h2>{movie.year}</h2>
-            <p>{movie.description}</p>
+            <img className={styles.LargeMoviePoster} src={movie.Poster}></img>
+            <h3>{movie.Title}</h3>
+            <h2>{movie.Year}</h2>
+            <p>{movie.Plot}</p>
             
             <button onClick={setFavourite}>
                 {isFavourite ? "Remove from Favourites" : "Add to Favourites"}

@@ -4,14 +4,14 @@ import Link from 'next/link';
 export default function SmallMovieCard({ movie, isFavourite, setFavourite}) {
     return (
         <div className={styles.SmallMovieCard}>
-            <img className={styles.SmallMoviePoster} src={movie.poster}></img>
-            <h3>{movie.title}</h3>
-            <p>{movie.year}</p>
+            <img className={styles.SmallMoviePoster} src={movie.Poster}></img>
+            <h3>{movie.Title}</h3>
+            <p>{movie.Year}</p>
             
             <button onClick={setFavourite}>
                 {isFavourite ? "Remove from Favourites" : "Add to Favourites"}
             </button>
-            <Link src={`/movie/${movie.id}`}>View Details</Link>
+            <Link src={`/movie/${movie.imdbID}`}>View Details</Link>
         </div>
     );
 }

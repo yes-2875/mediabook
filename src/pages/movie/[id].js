@@ -11,6 +11,8 @@ export default function MovieDetails() {
     const router = useRouter();
     console.log(router.query);
     
+    const {id} = useParams();
+    
     return (
         <>
         <Head>
