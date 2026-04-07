@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import styles from "@/styles/Home.module.css";
 import "@/styles/globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
+import { FavoritesProvider } from "@/context/FavoritesContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,12 +17,21 @@ const geistMono = Geist_Mono({
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
-    <Navbar font1={geistSans} font2={geistMono}/>
-    <div className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`} style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <Component {...pageProps} />
-    </div>
-    <Footer font1={geistSans} font2={geistMono}/>
-    </>
+
+    <FavoritesProvider>
+      <Navbar font1={geistSans} font2={geistMono} />
+      <div
+        className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
+        style={{
+          flex: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Component {...pageProps} />
+      </div>
+      <Footer font1={geistSans} font2={geistMono} />
+    </FavoritesProvider>
   );
 }

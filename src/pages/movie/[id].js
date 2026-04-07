@@ -1,20 +1,20 @@
+'use client';
 import { useRouter } from "next/router";
 import { sampleData } from "@/sampleData";
-import { useEffect, useState } from 'react';
-
+import { useFavorites } from "@/context/FavoritesContext";
 import LargeMovieCard from "@/components/LargeMovieCard";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 
-
 export default function MovieDetails() {
-    
-    const router = useRouter();
-    console.log(router.query.id);
-    
-    const setFavourite = function() {
-      
-    }
+  const router = useRouter();
+  const { id } = router.query;
+  const { favorites, addfavorite, removefavorite } = useFavorites();
+  const movie = sampleData.find(item => item.imdbID === id);
+  const isFav = movie && favorites.some(f => f.imdbID === movie.imdbID);
+
+  if (!movie) return <p>Loading...</p>;
+
     
     return (
         <>
@@ -25,7 +25,13 @@ export default function MovieDetails() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className={styles.main}>
-          <LargeMovieCard movie={sampleData.filter(item => item.imdbID === router.query.id)} isFavourite={false} setFavourite={setFavourite}/>
+          <LargeMovieCard 
+          movie={movie}
+          isFavourite={isFav}
+          setFavourite={() =>
+          isFav
+          ? removefavorite(movie.imdbID)
+          : addfavorite(movie) } />
         </main>
         </>
     );

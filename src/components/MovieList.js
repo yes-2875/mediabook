@@ -1,18 +1,25 @@
 import SmallMovieCard from "./SmallMovieCard";
 import styles from '@/styles/MovieList.module.css';
+import { useFavorites } from "@/context/FavoritesContext";
 
 export default function MovieList({ movies }) {
-    const setFavourite = function() {
-        
-    }
-    
-    const listItems = movies.map(movie => {
-        return <SmallMovieCard key={movies.findIndex((item) => item.imdbID === movie.imdbID)} movie={movie} isFavourite={false} setFavourite={setFavourite}/>
-    });
-    
+    const { favorites, addfavorite, removefavorite } = useFavorites();
+
+    const isFav = (movie) =>
+        favorites.some(f => f.imdbID === movie.imdbID);
+
     return (
         <div className={styles.MovieList}>
-            {listItems}
+        {movies.map(movie => (
+        <SmallMovieCard
+        key={movie.imdbID}
+        movie={movie}
+        isFavourite={isFav(movie)}
+        setFavourite={() =>
+        isFav(movie)
+        ? removefavorite(movie.imdbID)
+        : addfavorite(movie) } />
+        ))}
         </div>
     );
 }
