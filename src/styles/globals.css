@@ -2,9 +2,12 @@
   --background: #ebfffa;
   --foreground: #091413;
   --footer: #c3ddd8;
-  --accent-color-1: #c6fce5;
-  --accent-color-2: #90edd9;
-  --accent-color-3: #6bc4ca;
+  --accent-color-1: rgba(198, 252, 229, 0.5);
+  --accent-color-2: rgba(144, 237, 217, 0.5);
+  --accent-color-3: rgba(107, 196, 202, 0.5);
+  
+  --link-active: rgb(144, 237, 217);
+  --link-hover: rgb(107, 196, 202);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +18,8 @@
     --accent-color-1: rgba(40, 90, 72, 0.2);
     --accent-color-2: rgba(64, 138, 113, 0.4);
     --accent-color-3: rgba(176, 228, 204, 0.5);
+    --link-active: rgb(64, 138, 113);
+    --link-hover: rgb(176, 228, 204);
   }
   
   .logo {
@@ -82,7 +87,7 @@ h1 {
 }
 
 h2 {
-  max-width: 420px;
+  max-width: 500px;
   font-size: 26px;
   font-weight: 600;
   line-height: 36px;
@@ -92,7 +97,7 @@ h2 {
 }
 
 h3 {
-  max-width: 320px;
+  max-width: 400px;
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
@@ -101,7 +106,7 @@ h3 {
 }
 
 p {
-  max-width: 440px;
+  /*max-width: 440px;*/
   font-size: 18px;
   line-height: 32px;
   text-wrap: balance;
@@ -111,4 +116,9 @@ p {
 a {
   font-weight: 500;
   color: var(--text-primary);
+}
+
+button {
+  font-family: var(--font-geist-sans);
+  font-size: 18px;
 }

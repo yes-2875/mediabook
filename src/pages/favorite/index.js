@@ -7,7 +7,7 @@ export default function FavoritePage() {
   const { favorites, removefavorite } = useFavorites();
 
   return (
-    <div className={styles.intro}>
+    <div className={styles.main}>
       <h1>My Favorites</h1>
 
       {favorites.length === 0 && (

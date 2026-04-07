@@ -8,6 +8,7 @@
     font-family: var(--font-geist-sans);
     font-size: 18px;
     color: var(--text-primary);
+
 }
 
 .Link {
@@ -19,9 +20,9 @@
 }
 
 .Link:hover {
-    color: var(--accent-color-3);
+    color: var(--link-hover);
 }
 
 .Link:active {
-    color: var(--accent-color-2);
+    color: var(--link-active);
 }

@@ -8,10 +8,10 @@ export default function SmallMovieCard({ movie, isFavourite, setFavourite}) {
             <h3>{movie.Title}</h3>
             <p>{movie.Year}</p>
             
-            <button onClick={setFavourite}>
+            <button className={styles.FavouritesButton} onClick={setFavourite}>
                 {isFavourite ? "Remove from Favourites" : "Add to Favourites"}
             </button>
-            <Link href={`/movie/${movie["imdbID"]}`}>View Details</Link>
+            <Link href={`/movie/${movie["imdbID"]}`} className={styles.ViewDetails}>View Details</Link>
         </div>
     );
 }
