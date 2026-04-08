@@ -8,15 +8,21 @@ This website is a demonstration of a front-end project that allows users to sear
 ## Roles and Responsibilities
 
 **Project Manager/Supervisor** (manages the GitHub/Vercel repository and hosting, additionally helping in a little bit of every role for equal participation):
+
 - Mirza Baig
 - Farhad Asgari Hasan Vand
+
 **Front-end Development** (React/Next.js/CSS styling, components and state):
+
 - Zlata Skotnyk
 - Mikhail Azaranka
+
 **Back-end Development** (API requests/data handling):
 - Ethan Pothier
 - Randy Rampersaud
+
 **Tester/Bugfixing**:
+
 - Andrew Doyle
 - Meryem Kadam
 
