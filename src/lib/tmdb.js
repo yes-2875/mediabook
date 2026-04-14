@@ -2,10 +2,10 @@ const BASE_URL = "https://api.themoviedb.org/3";
 const IMAGE_BASE = "https://image.tmdb.org/t/p/w500";
 
 function getApiKey() {
-  const key = process.env.TMDB_API_KEY;
-  if (!key) {
+  const key = process.env.NEXT_PUBLIC_TMDB_API_KEY;
+    if (!key) {
     throw new Error(
-      "Missing TMDB_API_KEY. Create .env.local in the project root (see .env.example), add your key, then restart npm run dev."
+      "Missing NEXT_PUBLIC_TMDB_API_KEY. Create .env.local in the project root (see .env.example), add your key, then restart npm run dev."
     );
   }
   return key;
