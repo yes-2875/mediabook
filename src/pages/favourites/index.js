@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useFavorites } from "@/context/FavoritesContext";
 import SmallMovieCard from "@/components/SmallMovieCard";
 import styles from "@/styles/Home.module.css";
+import MovieList from "@/components/MovieList";
 
 export default function FavouritesPage() {
   const { favorites, removefavorite } = useFavorites();
@@ -20,24 +21,7 @@ export default function FavouritesPage() {
           <p>No favourites yet. Add some from the home page.</p>
         )}
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-            gap: "20px",
-            width: "100%",
-            maxWidth: "900px",
-          }}
-        >
-          {favorites.map((movie) => (
-            <SmallMovieCard
-              key={movie.id}
-              movie={movie}
-              isFavourite={true}
-              setFavourite={() => removefavorite(movie.id)}
-            />
-          ))}
-        </div>
+        <MovieList movies={favorites}/>
       </div>
     </>
   );
