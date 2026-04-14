@@ -83,3 +83,16 @@
     color: var(--text-secondary);
     border: 1px solid var(--accent-color-2);
 }
+
+@media(width <= 1150px) {
+    .SmallMovieCard {
+        width: 200px;
+    }
+}
+
+@media(width <= 600px) {
+    .SmallMovieCard {
+        width: 150px;
+        
+    }
+}
