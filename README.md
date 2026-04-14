@@ -8,12 +8,10 @@ This website is a demonstration of a front-end project that allows users to sear
 ## Roles and Responsibilities
 
 **Project Manager/Supervisor** (manages the GitHub/Vercel repository and hosting, additionally helping in a little bit of every role for equal participation):
-
 - Mirza Baig
 - Farhad Asgari Hasan Vand
 
 **Front-end Development** (React/Next.js/CSS styling, components and state):
-
 - Zlata Skotnyk
 - Mikhail Azaranka
 
@@ -22,9 +20,38 @@ This website is a demonstration of a front-end project that allows users to sear
 - Randy Rampersaud
 
 **Tester/Bugfixing**:
-
 - Andrew Doyle
 - Meryem Kadam
 
 ## CONTRIBUTOR GUIDE
 If editing code, **DO NOT** fork the repository, use the shared `dev/1` branch in this repository and push commits through the **Source Control tab in Visual Studio Code**. Before working on the `dev/1` branch, make sure it is up to date with `main` by using the Source Control tab in VSCode or git terminal to pull from `main` and push those commits. Afterwards **create pull requests** (and issues to solve with the PRs if there are none) from `dev/1` and the project maintainers will review before merging into `main`.
+
+
+## Components & State Management
+- **Footer**
+    - Displays simple information about the site
+- **Home Content**
+    - Contains a place for searching
+    - Uses state management to manage search results, loading, and errors.
+    - Displays trending
+- **Large Movie Card**
+    - Displays detailed and enlarged card for movies
+- **Small Movie Card**
+    - Displays less detailed information for movies
+- **Movie List**
+    - Displays a list of movies
+- **Nav Bar**
+    - Contains the links for routing
+
+## Pages
+- **Home Page**
+    - Allows for the user to search, and view trending information.
+- **Favourites**
+    - Displays a list of your favourites
+    - Uses context and state to set and remember favourites.
+- **Movie**
+    - Displays movie information in a larger format than the cards
+ 
+## Routing
+From the nav bar, the user can click on 'favourites' to go the Favourites page, and 'Home' to go to the home page.
+When clicking on a movie card, it will send the user to the movie's page.
