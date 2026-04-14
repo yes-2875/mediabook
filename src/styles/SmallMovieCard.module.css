@@ -26,6 +26,12 @@
     border-radius: .5em;
 }
 
+.Rating {
+    font-size: 0.95em;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
 .FavouritesButton {
     padding: .5em 1em;
     background-color: var(--accent-color-2);

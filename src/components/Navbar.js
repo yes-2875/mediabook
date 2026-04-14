@@ -13,7 +13,7 @@ export default function Navbar({ font1, font2 }) {
         <nav className={`${styles.Navbar} ${font1.variable} ${font2.variable}`}>
             <img src='logo_long.svg' className='logo' />
             <Link href="/" className={clsx(styles.Link, { [styles.current]: pathName === "/" })} > Home </Link>
-            <Link href="/favorite" className={clsx(styles.Link, { [styles.current]: pathName === "/favorite" })} > Favourites ({favorites.length}) </Link>
+            <Link href="/favourites" className={clsx(styles.Link, { [styles.current]: pathName === "/favourites" })} > Favourites ({favorites.length}) </Link>
         </nav>
     );
 }

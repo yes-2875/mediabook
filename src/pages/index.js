@@ -1,9 +1,28 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import { sampleData } from "@/sampleData";
-import MovieList from "@/components/MovieList";
+import HomeContent from "@/components/HomeContent";
+import { fetchFromTMDB } from "@/lib/tmdb";
 
-export default function Home() {
+export async function getServerSideProps() {
+  try {
+    const data = await fetchFromTMDB("/trending/movie/week");
+    return {
+      props: {
+        trending: data.results ?? [],
+        fetchError: null,
+      },
+    };
+  } catch (e) {
+    return {
+      props: {
+        trending: [],
+        fetchError: e?.message ?? "Could not load trending movies.",
+      },
+    };
+  }
+}
+
+export default function Home({ trending, fetchError }) {
   return (
     <>
       <Head>
@@ -13,8 +32,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1>Sample Movie Data</h1>
-        <MovieList movies={sampleData}/>
+        <h1>Movies</h1>
+        <HomeContent trending={trending} fetchError={fetchError} />
       </main>
     </>
   );
