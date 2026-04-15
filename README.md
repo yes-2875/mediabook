@@ -29,29 +29,35 @@ If editing code, **DO NOT** fork the repository, use the shared `dev/1` branch i
 
 ## Components & State Management
 - **Footer**
-    - Displays simple information about the site
+    - Displays copyright information and disclaimer about all movie data displayed on the website
 - **Home Content**
     - Contains a place for searching
     - Uses state management to manage search results, loading, and errors.
-    - Displays trending
+    - Displays a list of all trending movies for the current week, if no search query is provided.
 - **Large Movie Card**
-    - Displays detailed and enlarged card for movies
+    - Displays movie information in greater detail
+    - Shows poster art, year, ratings, runtime, genres, plot summary.
+    - Additionally shows an embedded YouTube trailer frame, along with a favourites button.
 - **Small Movie Card**
-    - Displays less detailed information for movies
+    - Displays movie information in smaller detail
+    - Shows poster art, year, IMDb ratings, and a View Details button to see it in greater detail (as a Next.js Link).
+    - Displays an additional button to add/remove from user favourites.
 - **Movie List**
-    - Displays a list of movies
-- **Nav Bar**
+    - Displays a grid of movies in Small Movie Cards, demonstrating compound components
+- **Navbar**
     - Contains the links for routing
 
 ## Pages
-- **Home Page**
-    - Allows for the user to search, and view trending information.
-- **Favourites**
-    - Displays a list of your favourites
-    - Uses context and state to set and remember favourites.
-- **Movie**
-    - Displays movie information in a larger format than the cards
+- **Home Page** `pages/index.js`
+    - Main page for the user to search movies and view trending movie information.
+- **Favourites** `/pages/favorite.js`
+    - Displays a MovieList of the user's favourites collection of movies
+    - Uses context and state along with HTML localStorage API to set and remember favourites.
+- **Movie** `/pages/movie/[id.js]`
+    - Cannot be accessed from the navbar, but rather by clicking the "View Details" buttons in the small movie cards.
+    - Dynamically routed using movie id as a parameter in the URL.
+    - Shows movie information in Large Movie Card component and requests more details through TMDB API.
  
 ## Routing
-From the nav bar, the user can click on 'favourites' to go the Favourites page, and 'Home' to go to the home page.
-When clicking on a movie card, it will send the user to the movie's page.
+From the Navbar, the user can click on 'favourites' to go the Favourites page, and 'Home' to go to the home page.
+When clicking the View Details button on any Small Movie Card, it will send the user to the movie's page.
